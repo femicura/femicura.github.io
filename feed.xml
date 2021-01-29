@@ -3,7 +3,7 @@
     <title>Femicura</title>
     <link href="https://femicura.at/feed.xml" rel="self" />
     <link href="https://femicura.at" />
-    <updated>2021-01-28T22:13:02+01:00</updated>
+    <updated>2021-01-29T15:39:31+01:00</updated>
     <author>
         <name>Clara Goldmann</name>
     </author>
@@ -17,10 +17,10 @@
         <link href="https://femicura.at/ordinationszeiten.html"/>
         <id>https://femicura.at/ordinationszeiten.html</id>
 
-        <updated>2021-01-28T22:13:02+01:00</updated>
+        <updated>2021-01-29T15:39:31+01:00</updated>
             <summary>
                 <![CDATA[
-                     Ordinationszeiten Montag: 8:00 - 17:00Dienstag: 12:00 - 14:00 Anfahrt here comes the map... 
+                     Ordinationszeiten Montag: ...Dienstag: ...Mittwoch: ... Donnerstag: ... Freitag: ... Anfahrt Karte... 
                 ]]>
             </summary>
         <content type="html">
@@ -31,7 +31,7 @@
     </h2>
 
   <ul>
-    <li>Montag: 8:00 - 17:00</li><li>Dienstag: 12:00 - 14:00</li>
+    <li>Montag: ...</li><li>Dienstag: ...</li><li>Mittwoch: ...<br></li><li>Donnerstag: ...<br></li><li>Freitag: ...</li>
   </ul>
 
     <h2 id="anfahrt">
@@ -39,7 +39,7 @@
     </h2>
 
   <p>
-    here comes the map...
+    Karte...
   </p>
             ]]>
         </content>
