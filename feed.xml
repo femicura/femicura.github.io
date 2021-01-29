@@ -3,7 +3,7 @@
     <title>Femicura</title>
     <link href="https://femicura.github.io/feed.xml" rel="self" />
     <link href="https://femicura.github.io" />
-    <updated>2021-01-29T15:39:31+01:00</updated>
+    <updated>2021-01-29T16:23:33+01:00</updated>
     <author>
         <name>Clara Goldmann</name>
     </author>
@@ -17,10 +17,10 @@
         <link href="https://femicura.github.io/ordinationszeiten.html"/>
         <id>https://femicura.github.io/ordinationszeiten.html</id>
 
-        <updated>2021-01-29T15:39:31+01:00</updated>
+        <updated>2021-01-29T16:23:33+01:00</updated>
             <summary>
                 <![CDATA[
-                     Ordinationszeiten Montag: ...Dienstag: ...Mittwoch: ... Donnerstag: ... Freitag: ... Anfahrt Karte... 
+                     Ordinationszeiten Montag: ...Dienstag: ...Mittwoch: ... Donnerstag: ... Freitag: ... Anfahrt Karte hier 
                 ]]>
             </summary>
         <content type="html">
@@ -39,7 +39,7 @@
     </h2>
 
   <p>
-    Karte...
+    Karte hier
   </p>
             ]]>
         </content>
