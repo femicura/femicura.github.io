@@ -2,16 +2,16 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "Femicura",
     "description": "",
-    "home_page_url": "https://femicura.at",
-    "feed_url": "https://femicura.at/feed.json",
+    "home_page_url": "https://femicura.github.io",
+    "feed_url": "https://femicura.github.io/feed.json",
     "user_comment": "",
     "author": {
         "name": "Clara Goldmann"
     },
     "items": [
         {
-            "id": "https://femicura.at/ordinationszeiten.html",
-            "url": "https://femicura.at/ordinationszeiten.html",
+            "id": "https://femicura.github.io/ordinationszeiten.html",
+            "url": "https://femicura.github.io/ordinationszeiten.html",
             "title": "FEMICURA",
             "summary": " Ordinationszeiten Montag: ...Dienstag: ...Mittwoch: ... Donnerstag: ... Freitag: ... Anfahrt Karte... ",
             "content_html": "\n    <h2 id=\"ordinationszeiten\">\n      Ordinationszeiten\n    </h2>\n\n  <ul>\n    <li>Montag: ...</li><li>Dienstag: ...</li><li>Mittwoch: ...<br></li><li>Donnerstag: ...<br></li><li>Freitag: ...</li>\n  </ul>\n\n    <h2 id=\"anfahrt\">\n      Anfahrt\n    </h2>\n\n  <p>\n    Karte...\n  </p>",
