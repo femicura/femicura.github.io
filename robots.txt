@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://femicura.github.io/sitemap.xml
