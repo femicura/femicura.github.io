@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Femicura",
+    "description": "",
+    "home_page_url": "https://femicura.at",
+    "feed_url": "https://femicura.at/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Clara Goldmann"
+    },
+    "items": [
+        {
+            "id": "https://femicura.at/ordinationszeiten.html",
+            "url": "https://femicura.at/ordinationszeiten.html",
+            "title": "FEMICURA",
+            "summary": " Ordinationszeiten Montag: ...Dienstag: ...Mittwoch: ... Donnerstag: ... Freitag: ... Anfahrt Karte hier... ",
+            "content_html": "\n    <h2 id=\"ordinationszeiten\">\n      Ordinationszeiten\n    </h2>\n\n  <ul>\n    <li>Montag: ...</li><li>Dienstag: ...</li><li>Mittwoch: ...<br></li><li>Donnerstag: ...<br></li><li>Freitag: ...</li>\n  </ul>\n\n    <h2 id=\"anfahrt\">\n      Anfahrt\n    </h2>\n\n  <p>\n    Karte hier...\n  </p>",
+            "author": {
+                "name": "Clara Goldmann"
+            },
+            "tags": [
+            ],
+            "date_published": "2021-01-28T21:59:52+01:00",
+            "date_modified": "2021-01-29T16:33:59+01:00"
+        }
+    ]
+}
