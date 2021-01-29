@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Femicura</title>
-    <link href="https://www.femicura.at/feed.xml" rel="self" />
-    <link href="https://www.femicura.at" />
+    <link href="https://femicura.at/feed.xml" rel="self" />
+    <link href="https://femicura.at" />
     <updated>2021-01-28T22:13:02+01:00</updated>
     <author>
         <name>Clara Goldmann</name>
     </author>
-    <id>https://www.femicura.at</id>
+    <id>https://femicura.at</id>
 
     <entry>
         <title>FEMICURA</title>
         <author>
             <name>Clara Goldmann</name>
         </author>
-        <link href="https://www.femicura.at/ordinationszeiten.html"/>
-        <id>https://www.femicura.at/ordinationszeiten.html</id>
+        <link href="https://femicura.at/ordinationszeiten.html"/>
+        <id>https://femicura.at/ordinationszeiten.html</id>
 
         <updated>2021-01-28T22:13:02+01:00</updated>
             <summary>
