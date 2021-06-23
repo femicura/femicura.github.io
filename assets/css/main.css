@@ -60,6 +60,15 @@ nav .brand-logo {
   color: #485156;
 }
 
+/*** Impressum ***/
+#impressum tr {
+   border: none;
+}
+#impressum td {
+   padding: 5px 5px;
+   font-size: 80%;
+   line-height: 1.15;
+}
 
 /*** Fonts ***/
 /* josefin-sans-regular - latin */
