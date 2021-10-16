@@ -3,7 +3,19 @@
   Therefore, attach only the style.css file to the head section.
 */
 
+/* 
+#24bfb6
+#1c8690
+#3596b5 -- dunkelblau
+#74cced -- hellblau
+#485156 -- logo font color
+*/
+
 /*** Layout ***/
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,37 +23,170 @@ html {
 body {
   font: 400 1rem/1.6 "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #313131;
-  display: flex;
+  background-color: #ffffff;
+  line-height: 1.5;
+
   min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: flex;
   flex-direction: column;
+  gap: 3rem;
+}
+
+a {
+  color: #3596b5;
+  transition: color 300ms;
+}
+a:visited {
+  color: #3596b5;
+}
+a:hover {
+  color: #74cced;
+}
+
+/*** Header ***/
+
+header {
+  color: #485156;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#logoContainer {
+  display: grid;
+  gap: 2rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 1.2fr;
+  align-items: center;
+}
+
+header h1,
+header h2,
+header h3 {
   margin: 0;
 }
 
-.section {
-  padding-top: 3rem;
-}
+/*** NavBar ***/
 
-h2 {
-  margin-top: 0;
-}
-
-#navbar {
+nav {
   position: sticky;
   top: 0;
+  margin: 0 -2rem;
+  background-color: #ffffff;
+  box-shadow: 0 3px 3px -3px #ffffff;
+  z-index: 1;
 }
 
-#logo {
-  max-height: 64px;
-  padding: 6px;
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #74cced;
 }
 
-#hero {
-  background-color: #a4d7de;
-  padding: 2.8rem 0;
+nav li {
+  display: inline;
+  margin-bottom: -2px;
+  line-height: 4rem;
 }
 
-#spacer {
-  flex-grow: 1;
+nav li a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 0 1rem;
+  transition: color 300ms;
+}
+
+nav li a,
+nav li a:visited {
+  color: #485156;
+}
+
+nav li a:hover,
+nav li a:focus {
+  color: #3596b5;
+}
+
+nav li:not(:last-of-type)::after {
+  content: "\2014";
+}
+
+/* Scale from center effect */
+nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3596b5;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+nav li a:hover::after,
+nav li a:focus::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*** Main>Article>Sections ***/
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 2rem;
+}
+
+section {
+  display: grid;
+  gap: 2rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 1.2fr;
+  align-items: flex-start;
+  /* fix for scroll offset */
+  padding-top: 6rem;
+  margin-top: -6rem;
+}
+
+section:nth-of-type(even) {
+  grid-auto-columns: 1.2fr 1fr;
+}
+
+section > figure {
+  clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 0% 100%);
+}
+
+section:nth-of-type(even) > figure {
+  order: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 3% 100%);
+}
+
+.sectionTitle {
+  font-size: 4rem;
+  margin: 0;
+  color: #3596b5;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+ul li::marker {
+  color: #3596b5;
+}
+
+figure {
+  margin: 0;
 }
 
 img {
@@ -57,6 +202,8 @@ h4,
 h5,
 h6 {
   font-family: "Josefin Sans";
+  line-height: 1.15;
+  font-weight: 200;
 }
 
 h1 {
@@ -73,23 +220,38 @@ strong {
   font-weight: bolder;
 }
 
-.post-entry ul li {
-  list-style-type: square;
+/*** Ordinationszeiten ***/
+#ordinationszeiten-3 tr {
+  height: 4rem;
+  background-color: #f8f8f8;
 }
-
-nav ul a,
-nav .brand-logo {
-  color: #485156;
+#ordinationszeiten-3 tr:nth-of-type(even) {
+  background-color: #ffffff;
+}
+#ordinationszeiten-3 tr > td {
+  white-space: nowrap;
+  padding: 0.5rem 1.5rem;
+}
+#ordinationszeiten-3 tr > td:nth-of-type(3) {
+  width: 100%;
 }
 
 /*** Impressum ***/
+#impressum .sectionTitle {
+  font-size: 2rem;
+}
 #impressum tr {
   border: none;
 }
 #impressum td {
-  padding: 5px 5px;
-  font-size: 80%;
-  line-height: 1.15;
+  font-weight: 200;
+  font-size: 0.8rem;
+  line-height: 1;
+  padding: 0.1rem 0.3rem;
+}
+#impressum tr td:nth-of-type(1) {
+  font-weight: 400;
+  text-align: right;
 }
 
 /*** Fonts ***/
@@ -104,15 +266,133 @@ nav .brand-logo {
       url("../fonts/josefin-sans-v17-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* josefin-sans-100 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: local(""),
+    url("../fonts/josefin-sans-v17-latin-100.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v17-latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* josefin-sans-200 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: local(""),
+    url("../fonts/josefin-sans-v17-latin-200.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v17-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* josefin-sans-300 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("../fonts/josefin-sans-v17-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v17-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* josefin-sans-500 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("../fonts/josefin-sans-v17-latin-500.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v17-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* josefin-sans-600 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""),
+    url("../fonts/josefin-sans-v17-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v17-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* josefin-sans-700 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/josefin-sans-v17-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v17-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-200 - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 200;
+  src: local(""), url("../fonts/raleway-v22-latin-200.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/raleway-v22-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* raleway-regular - latin */
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   src: local(""),
-    url("../fonts/raleway-v19-latin-regular.woff2") format("woff2"),
+    url("../fonts/raleway-v22-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/raleway-v19-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../fonts/raleway-v22-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-700 - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/raleway-v22-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/raleway-v22-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-200italic - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 200;
+  src: local(""),
+    url("../fonts/raleway-v22-latin-200italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/raleway-v22-latin-200italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-italic - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/raleway-v22-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/raleway-v22-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-700italic - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/raleway-v22-latin-700italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/raleway-v22-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /*** CSS classes generated by Publii ***/
