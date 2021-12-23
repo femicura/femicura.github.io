@@ -220,6 +220,20 @@ strong {
   font-weight: bolder;
 }
 
+/*** Banner ***/
+#banner .sectionTitle {
+  display: none;
+}
+#banner .post-entry {
+  background-color: #3596b5;
+  color: #ffffff;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDhweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNDhweCIgZmlsbD0iIzc0Y2NlZCI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTExIDdoMnYyaC0yem0wIDRoMnY2aC0yem0xLTlDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvc3ZnPg==");
+  background-position: left center;
+  background-repeat: no-repeat;
+  border: 1em solid #3596b5;
+  padding-left: 60px;
+}
+
 /*** Ordinationszeiten ***/
 #ordinationszeiten-3 tr {
   height: 4rem;
