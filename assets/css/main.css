@@ -105,6 +105,7 @@ nav li {
   display: inline;
   margin-bottom: -2px;
   line-height: 4rem;
+  white-space: nowrap;
 }
 
 nav li a {
@@ -173,13 +174,6 @@ section:nth-of-type(even) {
   grid-auto-columns: 1.2fr 1fr;
 }
 
-@media (max-width: 900px) { 
-  section {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 section > figure {
   clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 0% 100%);
 }
@@ -193,6 +187,29 @@ section:nth-of-type(even) > figure {
   font-size: 4rem;
   margin: 0;
   color: #3596b5;
+}
+
+@media (max-width: 900px) { 
+  section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    margin-top: -4rem;
+  }
+  section:nth-of-type(even) > figure {
+    order: initial;
+    clip-path: initial
+  }
+  section > figure {
+    clip-path: initial
+  }
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  body {
+    padding: 1rem;
+    gap: 2rem;
+  }
 }
 
 ul li {
