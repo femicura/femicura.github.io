@@ -174,11 +174,11 @@ section:nth-of-type(even) {
   grid-auto-columns: 1.2fr 1fr;
 }
 
-section > figure {
+section > .figure {
   clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 0% 100%);
 }
 
-section:nth-of-type(even) > figure {
+section:nth-of-type(even) > .figure {
   order: 1;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 3% 100%);
 }
@@ -196,11 +196,11 @@ section:nth-of-type(even) > figure {
     padding-top: 4rem;
     margin-top: -4rem;
   }
-  section:nth-of-type(even) > figure {
+  section:nth-of-type(even) > .figure {
     order: initial;
     clip-path: initial
   }
-  section > figure {
+  section > .figure {
     clip-path: initial
   }
   .sectionTitle {
@@ -220,7 +220,7 @@ ul li::marker {
   color: #3596b5;
 }
 
-figure {
+.figure {
   margin: 0;
 }
 
