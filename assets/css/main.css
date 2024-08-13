@@ -67,7 +67,7 @@ header {
   max-height: 180px;
 }
 
-@media (max-width: 900px) { 
+@media (max-width: 900px) {
   #logoContainer {
     display: flex;
     flex-direction: column;
@@ -189,19 +189,19 @@ section:nth-of-type(even) > .figure {
   color: #3596b5;
 }
 
-@media (max-width: 900px) { 
+@media (max-width: 900px) {
   section {
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
     margin-top: -4rem;
   }
-  section:nth-of-type(even) > .figure {
-    order: initial;
-    clip-path: initial
-  }
   section > .figure {
-    clip-path: initial
+    order: 1;
+    clip-path: initial;
+  }
+  section:nth-of-type(even) > .figure {
+    clip-path: initial;
   }
   .sectionTitle {
     font-size: 3rem;
@@ -259,6 +259,9 @@ strong {
 #banner .sectionTitle {
   display: none;
 }
+#banner > div {
+  width: 100%;
+}
 #banner .post-entry {
   background-color: #3596b5;
   color: #ffffff;
@@ -283,6 +286,43 @@ strong {
 }
 #ordinationszeiten-3 tr > td:nth-of-type(3) {
   width: 100%;
+}
+
+/*** Terminbuchung ***/
+#terminbuchung > .figure {
+  color: white;
+  background-color: #3596b5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: 200px;
+  gap: 12px;
+  padding: 8px;
+}
+#terminButton {
+  display: block;
+}
+a.button {
+  border: white 1px solid;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+}
+a.button.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: lightgray !important;
+  border-color: lightgray !important;
+}
+a.button:hover {
+  background-color: #74cced;
+  color: white;
+}
+a.button:visited {
+  color: white;
 }
 
 /*** Impressum ***/
